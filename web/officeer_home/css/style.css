@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, ol {list-style: none;}
+a {color: inherit; text-decoration: none;}
+
+/*------ header */
+header {
+  width: 100%; border-bottom: 1px solid #ddd;
+}
+header div.inner {
+  width: 1180px; height: 100px; margin: 0 auto;
+  position: relative;
+}
+header div.inner h1 {
+  position: absolute; left: 0; bottom: 15px;
+}
+header div.inner h1 a {
+  font: bold 24px/1 'arial'; color:#444;
+}
+header div.inner ul.util {
+  position: absolute; top: 20px; right: 30px;
+}
+header div.inner ul.util li {
+  float: left;
+}
+header div.inner ul.util li a {
+  display: block; font: 0.75rem/1'arial'; color: #999;
+  padding: 0px 10px;
+}
+nav {position: absolute; bottom: 0; right: 0;}
+nav div {display: flex; position: relative; width: 500px; margin: 0 auto; justify-content: space-between;}
+nav div a {flex: 1; display: block; height: 30px; text-align: center; font: bold 0.9375rem/1 'arial'; color: #555; transition: all .5s;}
+
+nav div a.on {color: #001a3d}
+nav div > span {position: absolute; left: 0; bottom: 0; width: 100px; height: 3px; background-color: #3c598b; opacity: 0; transition: all .2s;}
+
+nav div > a:nth-child(1).on ~ span {left: 0; opacity: 1;}
+nav div > a:nth-child(2).on ~ span {left: 100px; opacity: 1;}
+nav div > a:nth-child(3).on ~ span {left: 200px; opacity: 1;}
+nav div > a:nth-child(4).on ~ span {left: 300px; opacity: 1;}
+nav div > a:nth-child(5).on ~ span {left: 400px; opacity: 1;}
+
+/*----------- main-figure */
+figure {
+  width: 100%; height: calc(100vh - 100px);
+  background-color: #000; position: relative;
+  overflow: hidden; padding-top: 250px;
+}
+figure video {
+  object-fit: cover; width: 100%; height: 100%; opacity: .7;
+  position: absolute; top: 0; left: 0;
+}
+figure div.inner {
+  width: 1180px; margin: 0 auto; 
+  position: relative; text-align: center;
+}
+figure div.inner h1 {
+  font: normal 100px/1 'arial'; color: #fff;
+  margin-bottom: 20px;
+}
+figure div.inner p {
+  font: 16px/1.4 'arial'; color: #fff; margin-bottom: 60px;
+}
+figure div.inner a {
+  display: block; width: 200px; height: 30px;
+  border: 1px solid #ddd; font: bold 11px/30px 'arial'; color: #fff; border-radius: 30px; margin: 0 auto;
+  text-align: center; letter-spacing: 1px; transition: all .5s;
+}
+figure div.inner a:hover {
+  background-color: #fff; color: #555;
+}
+section {
+  width: 100%; padding: 150px 0;
+}
+/*---------- section1 */
+section.vision {width: 1200px; margin: 0 auto;}
+section.vision div.inner h1 {
+  font: normal 25px/1.5 'arial'; color: #0e2e58;
+  margin-bottom: 20px; text-align: center;
+}
+section.vision a {
+  display: block; border-radius: 5px; margin: 0 auto; margin-top: 80px;
+  font-size: 13px; font-weight: bold; color: #000;
+  border: 1px solid #000; width: 150px; height: 30px; text-align: center; line-height: 30px;
+}
+section.vision a:hover {
+  background-color: #3c598b; color: #fff;
+}
+
+/* ----------- section2 */
+section.news {background-color: #001a3d; margin-bottom: 100px; color: #fff;}
+section.news div.inner {width: 80%; margin: 0 auto;}
+section.news p {margin-bottom: 30px;}
+section.news h2 {font-size: 40px; margin-bottom: 30px;}
+
+
+/* ----------- section3 */
+section.card div.inner {
+  width: 1400px; margin: 0 auto;
+}
+section.card div.inner h1 {
+  font: bold 30px/1 'arial'; color: #555; text-align: center; 
+  margin-bottom: 50px;
+}
+section.card div.inner div.wrap {
+  width: 100%;
+}
+section.card div.inner div.wrap article {
+  width: 285px; float: left; margin-right: 50px;
+}
+.wrap1 {width: 1400px; display: flex; justify-content: center; margin-top: 100px;}
+.wrap2 {width: 1400px; display: flex; justify-content: center; margin-top: 50px;}
+section.card div.inner div.wrap article:nth-child(3) {
+  margin-right: 0;
+}
+section.card div.inner div.wrap article:nth-child(6) {
+  margin-right: 0;
+}
+section.card div.inner div.wrap article h2 {
+  margin-bottom: 10px; text-align: center;
+}
+section.card div.inner div.wrap article h2 a {
+  font: bold 16px/1 'arial'; color: #555;
+}
+section.card div.inner div.wrap article div.pic {
+  width: 100%; height: 120px; background-color: #333;
+  margin-bottom: 15px; position: relative; overflow: hidden;
+}
+section.card div.inner div.wrap article div.pic img {
+  object-fit: cover; width: 100%; height: 100%;
+}
+
+/* ---------- section4 */
+section.contact {
+  width: 100%; height: calc(100vh - 50px);
+  background-color: #000; position: relative;
+  overflow: hidden; padding-top: 250px;
+}
+section.contact video {
+  object-fit: cover; width: 100%; height: 100%; opacity: .5;
+  position: absolute; top: 0; left: 0;
+}
+section.contact div.inner {width: 1180px; margin: 0 auto; 
+  position: relative; text-align: center; color: #fff;}
+
+section.contact .inner h2 {margin: 0 auto; padding: 10px; font-size: 50px; width: 300px; border-bottom: 1px solid #ddd;}
+
+section.contact .inner p {padding: 20px; margin-top: 20px;}
+section.contact .inner p:nth-of-type(2) {margin-bottom: 0px;}
+
+section.contact .inner a {display: block; width: 200px; height: 40px; 
+  border:1px solid #fff; line-height: 40px; border-radius: 10px; margin: 0 auto;}
+
+section.contact .inner a:hover {background-color: #fff; color: #000;}
+
+
+/* ---------- footer */
+footer {
+  width: 100%; background-color: #001a3d; padding: 30px 0px;
+}
+footer div.inner {
+  width: 1180px; margin: 0 auto; color: #999;
+}
+footer div.inner div.lower p {
+  width: 100%; font: 14px/1 'arial'; text-align: center;
+}
+
+/* ----------work--------- */
+div.backbg {position: absolute; top: 100px; left: 0; background-color: #001a3d; 
+  width: 100%; height: 300px;}
+section.card2 p {font-size: 15px; text-align: center;}
+section.card2 div.inner {
+  width: 1400px; margin: 0 auto;
+}
+section.card2 div.inner h1 {
+  font: bold 30px/1 'arial'; color: #fff; text-align: center;
+  margin-bottom: 20px; position: relative; 
+}
+section.card2 div.inner p {
+  border-top: 1px solid #fff; padding-top: 20px; width: 500px; 
+  font: normal 10px/1 'arial';  color: #fff; margin: 0 auto; position: relative;
+}
+section.card2 div.inner div.wrap {
+  width: 100%;
+}
+section.card2 div.inner div.wrap article {
+  width: 285px; float: left; margin-right: 50px;
+}
+.wrap1 {width: 1400px; display: flex; justify-content: center; margin-top: 100px;}
+.wrap2 {width: 1400px; display: flex; justify-content: center; margin-top: 50px;}
+section.card2 div.inner div.wrap article:nth-child(3) {
+  margin-right: 0;
+}
+section.card div.inner div.wrap article:nth-child(6) {
+  margin-right: 0;
+}
+section.card2 div.inner div.wrap article h2 {
+  margin-bottom: 10px; text-align: center;
+}
+section.card2 div.inner div.wrap article h2 a {
+  font: bold 16px/1 'arial'; color: #555;
+}
+section.card2 div.inner div.wrap article div.pic {
+  width: 100%; height: 120px; background-color: #333;
+  margin-bottom: 15px; position: relative; overflow: hidden;
+}
+section.card2 div.inner div.wrap article div.pic img {
+  object-fit: cover; width: 100%; height: 100%;
+}
+
+/* --------- people --------- */
+div.backbg {position: absolute; top: 100px; left: 0; background-color: #001a3d; 
+  width: 100%; height: 300px;}
+section.card3 p {font-size: 15px; text-align: center;}
+section.card3 div.inner {
+  width: 1400px; margin: 0 auto;
+}
+section.card3 div.inner h1 {
+  font: bold 30px/1 'arial'; color: #fff; text-align: center;
+  margin-bottom: 20px; position: relative; 
+}
+section.card3 div.inner p {
+  border-top: 1px solid #fff; padding-top: 20px; width: 500px; 
+  font: normal 10px/1 'arial';  color: #fff; margin: 0 auto; position: relative;
+}
+section.card3 div.inner div.wrap {
+  width: 100%;
+}
+section.card3 div.inner div.wrap article {
+  margin-top: 50px;
+  width: 285px; float: left; margin-right: 50px;
+}
+.wrap1 {width: 1400px; display: flex; justify-content: center; margin-top: 100px;}
+.wrap2 {width: 1400px; display: flex; justify-content: center; margin-top: 50px;}
+section.card3 div.inner div.wrap article:nth-child(3) {
+  margin-right: 0;
+}
+section.card3 div.inner div.wrap article:nth-child(6) {
+  margin-right: 0;
+}
+section.card3 div.inner div.wrap article h2 {
+  margin-bottom: 10px; text-align: center;
+}
+section.card3 div.inner div.wrap article h2 a {
+  font: bold 16px/1 'arial'; color: #555;
+}
+section.card3 div.inner div.wrap article div.pic {
+  border-radius: 20px;
+  width: 100%; height: 200px; background-color: #333;
+  margin-bottom: 15px; position: relative; overflow: hidden;
+}
+section.card3 div.inner div.wrap article div.pic img {
+  object-fit: cover; width: 100%; height: 100%;
+}

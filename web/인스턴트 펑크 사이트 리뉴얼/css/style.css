@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: inherit;}
+img {border: 0;}
+html,body {height: 100%; background-color: #fff;}
+
+/* header nav area */
+header {
+    width: 100%; height: 40px; color: #ddd; position: fixed; top: 30px; left: 0; z-index: 1;
+    display: flex; 
+    justify-content:space-between; align-items:center;
+}
+
+header h1 {font-size: 30px; padding: 20px;}
+header .nav {position: fixed; top: 30px; left: 50%;}
+header div.btn1,.btn2 {width: 150px; height: 40px; border: 1px solid #fff; border-radius: 50px; 
+    background-color: #fff; color: #000; text-align: center; line-height: 40px; font-size: 20px; 
+    float: left; border: 1px solid #ddd;} 
+/* header .btn2 {margin-left: 50px;} */
+header div:hover {color:#FC9738;} 
+header div.nav2 {padding: 20px;}
+header h2 {color: #ddd; float: left; margin-top: 5px;}
+header button {width: 40px; height: 40px; border-radius: 50%; border: 0; 
+    float: left; margin-left: 10px; border: 1px solid #ddd;
+    color: aqua; background-color: #fff; font-size: 20px; font-weight: bold;
+}
+
+
+/* main image area */
+div#wrap {
+    width: 100%; height: 100vh; position: relative;
+    overflow: hidden; padding-top: 250px;
+}
+#wrap img {
+    object-fit: cover; width: 100%; height: 100%;
+    position: absolute; top: 0; left: 0;
+}
+#wrap div.inner {
+    width: 800px; margin: 0 auto; font-weight: bold;
+    position: relative; text-align: center;
+}
+#wrap div.inner h1 {
+    font: 200px/1 'arial'; color: #fff; letter-spacing: -10px;
+    margin-bottom: 20px; line-height: 130px;
+}
+#wrap div.inner p {
+    font: 20px/1.4 'arial'; font-weight: bold; color: #fff; margin-bottom: 25px; 
+}
+#wrap div.inner a {
+    display: block; width: 300px; height: 70px; margin: 0 auto; overflow: hidden;
+    border: 1px solid #ddd; border-radius: 50px; 
+    font: bold 30px 'arial'; color: #fff; line-height: 70px;
+    background-color: #fff; color: #FC9738;
+    text-align: center; letter-spacing: 1px; transition: all .3s;
+    animation: next linear 2s infinite;
+}
+#wrap div.inner a:hover {
+    opacity: 1;
+}
+@keyframes next {
+    0% {opacity: 50%;}
+    50% {opacity: 100%;}
+    100% {opacity: 25%;}
+}
+
+/* 3D banner  */
+.container {
+    overflow: hidden;
+    display: flex; justify-content: center; align-items: center; 
+    perspective: 1000px;
+}
+.cube {
+    width: 100%; height:100px;
+    transform-style:preserve-3d;
+    transition: all 1s;
+}
+.scube {
+    color: #fff; text-align: center; line-height: 100px; font-size: 40px; overflow: hidden;
+    width: 100%; height:100px;
+    position: absolute; top: 0; left: 0;
+}
+.scube:nth-child(1) {background-color: rgb(215, 255, 71); transform: translateZ(50px);}
+.scube:nth-child(2) {background-color: lightskyblue; transform:rotateX(90deg) translateZ(50px);}
+.scube:nth-child(3) {background-color: rgb(215, 255, 71); transform: rotateX(180deg) translateZ(50px);}
+.scube:nth-child(4) {background-color: lightskyblue; transform: rotateX(270deg) translateZ(50px);}
+
+
+/* clothe section */
+section {width: 1200px; margin: 0 auto; height: 100vh; 
+    display: flex; justify-content: space-between; align-items: center;}
+
+section div.top {width: 400px; position: relative; top: 100px; left: 30px;}
+section div.top img {width: 400px; }
+
+section div.outer {width: 400px; position: relative; top: 100px; left: 30px;}
+section div.outer img {width: 400px;}
+
+section p, button {margin-left: 40px;}
+section p:nth-of-type(1) {margin-bottom: 20px;}
+section p:nth-of-type(2) {font-size: 13px; color: rgb(55, 55, 55);}
+section button {position: absolute; top: 500px; right: 10px; border: 1px solid #ddd;
+    width: 80px; height: 30px; border-radius: 10px; background-color: #fff;}
+
+section div.banner1 {width: 300px; height: 550px; position: relative; top: 100px; left: 30px;}
+section div.banner1 img {width: 300px; border-radius: 20px; object-fit: cover; width: 100%; height: 100%;}
+section div.banner2 {width: 300px; height: 550px; position: relative; top: 100px; left: 30px;}
+section div.banner2 img {width: 300px; border-radius: 20px; object-fit: cover; width: 100%; height: 100%;}
+
+section.s3 {width: 1200px; margin: 0 auto;}
+section.s3 img {width: 1200px; border-radius: 20px;}
+
+
+/* 3D banner2  */
+.container2 {
+    overflow: hidden;
+    display: flex; justify-content: center; align-items: center; 
+    perspective: 1000px;
+    margin-bottom: 50px;
+}
+.cube2 {
+    width: 100%; height:100px;
+    transform-style:preserve-3d;
+    transition: all 1s;
+}
+.icube {
+    color: #fff; text-align: center; line-height: 100px; font-size: 40px; overflow: hidden;
+    width: 100%; height:100px;
+    position: absolute; top: 0; left: 0;
+}
+.icube:nth-child(1) {background-color: aqua; transform: translateZ(50px);}
+.icube:nth-child(2) {background-color: aquamarine; transform:rotateX(90deg) translateZ(50px);}
+.icube:nth-child(3) {background-color: aqua; transform: rotateX(180deg) translateZ(50px);}
+.icube:nth-child(4) {background-color: aquamarine; transform: rotateX(270deg) translateZ(50px);}
+
+/* celeb */
+.celeb::after{display: block; content: ""; clear: both;}
+
+.celeb h1 {color: aqua; font-size: 50px;}
+.celeb h1:nth-of-type(2) {text-align: right;}
+
+.celeb div:nth-of-type(1) {float: left; width: 50%;}
+.celeb div:nth-of-type(2) {float: right; width: 50%;}
+
+.celeb div img {width: 100%; border-radius: 50px; background-size: cover;}
+
+/* shop */
+div.shop {margin-top: 50px;}
+div.shop div.shopcont {display: flex; justify-content: center; align-items: center;}
+div.sopcont div {width: 150px;}
+div.shop div img{object-fit: cover; width: 100%; height: 100%;}
+
+/* footer */
+footer .footcont1 {
+    padding: 10px; font-size: 13px;
+    display: flex; justify-content: space-around; align-items:flex-start;
+    border-top: 1px solid #2e2e2e; border-bottom: 1px solid #2e2e2e;
+}
+footer .footcont2 {
+    height: 300px; margin: 0 auto;
+    font-size: 150px; font-weight: bold;
+    text-align: center; line-height: 300px;
+}
+footer .footcont3 {
+    height: 100px; font-size: 13px;
+    display: flex; justify-content: space-around; align-items: center;
+}
+
+/* serch pop */
+div#popup {
+    display: none;
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10; 
+}
+div#popup::after {display: block; content: ""; display: block;}
+div.pop {
+    float: left;
+    width: 700px; height: 70px; 
+    background-color: #fff; opacity: .8;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+}
+div.close {
+    float: left;
+    margin-left: 20px; margin-top: 25px;
+    width: 30px; height: 30px; 
+    background-color: #fff; border: 1px solid #ddd;
+    border-radius: 50%; color: rgb(179, 179, 179);
+    text-align: center; line-height: 30px;
+}

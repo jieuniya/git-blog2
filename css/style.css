@@ -1,0 +1,271 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {margin: 0; padding: 0;}
+html, body {width: 100%; height: 100%; text-align: center; background-color: #fff; 
+    font-family: 'Playfair Display'; 
+}
+a {text-decoration: none; color: inherit;}
+ul, ol {list-style: none;}
+
+h2 {font-size: 50px;}
+.section {padding: 50px; color: white; width: 100%; height: 100vh;}
+
+#fp-nav ul li a span {
+    background-color: #fff;
+    box-shadow: 2px 4px 4px gray;
+}
+div.fp-tooltip.fp-right {
+    text-shadow: 0px 0px 6px gray;
+}
+
+/* popup */
+div#popup {
+    width: 800px; height: 500px;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ececec;
+    z-index: 5;
+    padding: 30px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    display: none;
+    overflow-y: scroll;
+}
+div#popup img{
+    width:700px;
+}
+div#popup2 {
+    width: 800px; height: 500px;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 5;
+    padding: 30px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    display: none;
+}
+div#popup2 img{
+    width:800px;
+}
+
+
+
+/* section title */
+.section h2 {
+    color: gray; 
+    position: absolute; top:40px; left: 40px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+.section h3 {
+    opacity: .5; color: #333;
+    position: absolute; top:100px; left: 40px;
+}
+/* section s0 */
+/* .s0 {background-size: cover;} */
+
+/* .s0 img {width: 40%; position: relative; top: 0; left: 30%;} */
+
+div#maintext {
+    text-align: center;
+    position: absolute;
+    top: 45%; left: 50%; 
+    transform: translate(-50%,-50%); 
+    font-style: italic;
+}
+div#maintext h1 {
+    color: #fff;
+    font-size: 80px; line-height: 1; font-weight:bold; font-family:  'Playfair Display';
+    text-shadow: 2px 2px 4px gray;
+}
+nav ul {position: absolute; top: 30px; left: 10px;}
+nav ul li {float: left; padding-left: 20px;}
+nav ul li a {display: block; font-weight: 600; color: gray; font-family: 'Playfair Display';}
+
+button {position: absolute; top: 20px; right: 50px; width: 100px; height: 30px; font-size: 13px; font-weight: 700; font-family:  'Playfair Display'; color: gray; background-color: rgba(255,255,255,.5); border-radius: 5px; border: 1.5px solid lightgray; box-shadow: inset 0px 0px 2px 0px lightgray;}
+
+/* main section ani */
+.s0, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-image: url(../img/main.jpeg); */
+}
+.s0 {
+    margin: 0;
+    padding: 50px;
+    background: #262626;
+    background-image: url(../img/main.jpeg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.sphere {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    border: 7px dotted #30f651;
+    border-radius: 50%;
+    animation: spin 15s linear infinite;
+    transform-style: preserve-3d;
+    -ms-transform-style: none;
+}
+.sphere::before, .sphere::after {
+    width: 500px;
+    height: 500px;
+    border: 7px dotted #ede730;
+    border-radius: 50%;
+    content: "";
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.sphere::before{
+    transform: rotateX(-66.6deg);
+}
+.sphere::after{
+    transform: rotateX(66.6deg);
+}
+@keyframes spin {
+    0%{
+        transform: rotateY(1deg) rotateX(1deg) rotateZ(1deg);
+    }
+    0%{
+        transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+    }
+}
+
+.s0 .bottom-title {position: absolute; bottom: 0; left: 0; color: #333; }
+.bottom-title {position: absolute; bottom: 0; left: 0; letter-spacing: 5px; height: auto;
+    border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; color: #333; font-size:15px; font-family:'Raleway',Sans-serif; 
+    font-weight:300; width: 100%; padding:20px 0 20px 0;}
+.bottom-title p {color: #333;}
+
+
+/* section s1 */
+div.infocont {
+    height: 80%; position: relative; color: #333;
+    display: flex; justify-content: center; align-items: center;
+    /* outline: 1px solid red; */
+}
+div.infocont h1 {
+    padding-bottom: 20px; 
+    color: #333; font-size: 20px; font-family: 'arial';
+}
+div.infocont h1 img {
+    width: 20px;
+}
+div.infocont div {flex: 1;}
+
+div.infocont .cont1 p:nth-of-type(2) {padding-bottom: 30px;}
+div.infocont .cont1 p:nth-of-type(4) {padding-bottom: 30px;}
+
+/* div.infocont .cont3 {margin: 0 auto;} */
+
+div.icon {width: 300px; margin-bottom: 50px;}
+div.icon ul {display: flex; justify-content: space-around; align-items: center;}
+div.icon ul li {width: 50px; margin-top: 20px;}
+div.icon ul li img {width: 50px;}
+
+div.icon2 {width: 300px; margin-bottom: 50px;}
+div.icon2 img {width: 160px; margin-top: 20px;}
+
+div.icon h1 {border-bottom: 1px solid gray; padding-bottom: 20px;}
+div.icon2 h1 {border-bottom: 1px solid gray; padding-bottom: 20px;}
+
+/* section s2 */
+.s2 {height: 100vh; padding: 100px;}
+.s2 h2 {font-size: 50px; border-bottom: none;}
+/* .s2 h2 {width: 20%; text-align: right; position: absolute; top: 30%; border: 1px solid #fff; color: #fff; font-size: 60px;} */
+.s2 .maincont {width: 100%; height: 50%; 
+    display: flex; justify-content: space-around; align-items: center; 
+} 
+.s2 .main2cont {width: 100%; height: 50%;
+    display: flex; justify-content: space-around; align-items: center;} 
+.s2 .maincont1 {width: 33.3%; height:100%;}
+.s2 .maincont1 img {object-fit: cover; width: 100%; height:100%;}
+
+.s2 .maincont2 {width: 33.3%; height:100%;} 
+.s2 .maincont2 img {object-fit: cover; width: 100%; height:100%;}
+
+.s2 .maincont3 {width: 33.3%; height:100%;} 
+.s2 .maincont3 img {object-fit: cover; width: 100%; height:100%;} 
+
+
+.hiddentxt {z-index: 10; opacity: 1; width: 100%; height: 100%; position: relative; top: -100%; left: 0;}
+.hiddentxt p {font-weight: bold; font-size: 22px; border-bottom: .5px solid #fff;}
+.hiddentxt p:nth-child(2) {font-size: 15px; color: #fff; border: 0;}
+
+/* 섹션 추가 */
+.s3 div.inner {
+    width: 1400px; margin: 0 auto;
+}
+.s3 div.inner h1 {
+    font: bold 30px/1 'arial'; color: #555; text-align: center; 
+    margin-bottom: 50px;
+}
+.s3 div.inner div.wrap {
+    width: 100%;
+}
+.s3 div.inner div.wrap article {
+    width: 285px; float: left; margin-right: 50px;
+}
+.wrap1 {width: 1400px; display: flex; justify-content: center; margin-top: 100px;}
+.wrap2 {width: 1400px; display: flex; justify-content: center; margin-top: 50px;}
+.s3 div.inner div.wrap article:nth-child(3) {
+    /* margin-right: 0; */
+}
+.s3 div.inner div.wrap article:nth-child(6) {
+    /* margin-right: 0; */
+}
+.s3 div.inner div.wrap article h2 {
+    margin-bottom: 10px; text-align: center;
+}
+.s3 div.inner div.wrap article h2 a {
+    font: bold 16px/1 'arial'; color: #555;
+}
+.s3 div.inner div.wrap article div.pic {
+    width: 100%; height: 120px; background-color: #333;
+    margin-bottom: 15px; position: relative; overflow: hidden;
+}
+.s3 div.inner div.wrap article div.pic img {
+    object-fit: cover; width: 100%; height: 100%;
+}
+
+
+/* contact */
+#contactwrap {width: 100%; height: 100%;}
+#contact {
+    position: relative; top: 0; right: 0; width: 100%; height: 100%; color: #333;
+    display: flex; justify-content: center; align-items: center
+}
+#contactwrap h2 {position: absolute; top: 90%; left: 0; width: 100%; height: 50px;
+    font-size: 30px; line-height: 50px;
+    border-top: 1px solid gray; color: lightgray;}
+
+#contact div.left {width: 50%; margin: 0 auto;}
+#contact div.left img {width: 70%; margin: 0 auto;}
+
+#contact div.right {width: 50%; margin: 0 auto;}
+#contact div.right .links {padding: 20px; border: 1px solid #ddd; border-radius: 20px;
+    display: flex; justify-content: space-around; align-items: center;
+}
+
+#contact div.right h1 {margin-bottom: 50px;}
+#contact div.right div.link1 {width: 200px; height: 50px; margin-top: 20px;
+    text-align: center; line-height: 50px; border: 1px solid #ddd; border-radius: 10px;}
+
+#contact div.right img {width: 35px;}
+#contactwrap h2 img {width: 40px;}
+
+div.text{
+    outline: 1px solid red;
+    width: 200px;
+    height: 50px;
+}
